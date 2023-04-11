@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    let style1 = "tableLandscape"
+    let style2 = "tablePortrait"
+  </script>
+  <script src="scripts/orientation.js"></script>
+	<meta charset="UTF-8">
+	<title>Flags Table</title>
+
+</head>
+<body id="body">
+  <div class="search" id="myHeader">
+  <p>Total entries: 1164</p>
+	<div>
+		<input type="text" id="search-input" placeholder="Search by name...">
+	</div>
+  <br>
+  You can click on an image to enlarge it
+  <br><br>
+  <a href="index.html">Back to main page</a>
+</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Flag</th>
+				<th>Country</th>
+			</tr>
+		</thead>
+		<tbody id="table-body">
+		</tbody>
+	</table>
+
+
+    
+    <script>
+// get the table body element
+var tableBody = document.getElementById("table-body");
+
+// create an IntersectionObserver instance
+var observer = new IntersectionObserver(function(entries) {
+  // loop through the entries
+  for (var i = 0; i < entries.length; i++) {
+    var entry = entries[i];
+    // check if the entry is intersecting and has an image
+    if (entry.isIntersecting && entry.target.nodeName === "IMG") {
+      // load the image source
+      var src = entry.target.dataset.src;
+      entry.target.setAttribute("src", src);
+      // stop observing the target once the image is loaded
+      observer.unobserve(entry.target);
+    }
+  }
+});
+
+// fetch the CSV file
+fetch("https://test-dab.pages.dev/FilesNamesTags.csv")
+  .then(response => response.text())
+  .then(csvString => {
+    // parse the CSV string into an array of objects
+    var csvArray = csvString.trim().split("\n");
+    var headers = csvArray[0].split(",");
+    var rows = [];
+    for (var i = 1; i < csvArray.length; i++) {
+      var row = {};
+      var values = csvArray[i].split(",");
+      for (var j = 0; j < headers.length; j++) {
+        row[headers[j]] = values[j];
+      }
+      rows.push(row);
+    }
+
+    // loop through the rows and add them to the table
+    for (var i = 0; i < rows.length; i++) {
+      var row = rows[i];
+      var fileName = row["file"];
+      var name = row["name"];
+      var fileCell = document.createElement("td");
+      var nameCell = document.createElement("td");
+      var fileImg = document.createElement("img");
+
+      fileImg.id = 'flag'
+      fileImg.setAttribute("data-src", "imageFiles/flagsFiles/" + fileName);
+      fileImg.setAttribute("alt", "Flag of " + name);
+      fileImg.setAttribute("width", "100");
+      fileCell.style.textAlign = "center"; // center the image within the cell
+      fileCell.appendChild(fileImg);
+      nameCell.textContent = name;
+      var tableRow = document.createElement("tr");
+      tableRow.appendChild(fileCell);
+      tableRow.appendChild(nameCell);
+      tableBody.appendChild(tableRow);
+      // observe the image element
+// observe the image element
+observer.observe(fileImg);
+
+// sort the table rows by name
+rows.sort(function(a, b) {
+  var nameA = a["name"].toLowerCase();
+  var nameB = b["name"].toLowerCase();
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  return 0;
+});
+
+// add an event listener to the image element
+fileImg.addEventListener("click", function(event) {
+  event.stopPropagation();
+  enlargeImage(event.target);
+});
+
+// function to enlarge the image
+function enlargeImage(img) {
+  document.getElementById('body')
+  // create the overlay element
+  var overlay = document.createElement("div");
+  overlay.style.position = "fixed";
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.width = "100%";
+  overlay.style.height = "100%";
+  overlay.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  overlay.style.zIndex = 9999;
+  overlay.addEventListener("click", function() {
+    document.body.removeChild(this);
+  });
+
+  // create the image element
+  var enlargedImg = document.createElement("img");
+  enlargedImg.setAttribute("src", img.getAttribute("src"));
+  enlargedImg.style.position = "absolute";
+  enlargedImg.style.top = "50%";
+  enlargedImg.style.left = "50%";
+  enlargedImg.style.transform = "translate(-50%, -50%)";
+  enlargedImg.style.maxWidth = "90%";
+  enlargedImg.style.maxHeight = "90%";
+  enlargedImg.addEventListener("click", function(event) {
+    event.stopPropagation();
+    body.classList.add('noScroll')
+  });
+
+  // create the close button
+  var closeButton = document.createElement("button");
+  closeButton.textContent = "Close";
+  closeButton.style.position = "absolute";
+  closeButton.style.top = 0;
+  closeButton.style.right = 0;
+  closeButton.style.zIndex = 99999;
+  closeButton.addEventListener("click", function() {
+    document.body.removeChild(overlay);
+    body.classList.remove('noScroll')
+  });
+
+  // add the elements to the overlay
+  overlay.appendChild(enlargedImg);
+  overlay.appendChild(closeButton);
+  document.body.appendChild(overlay);
+}
+
+    }
+
+// add an event listener to the search input
+var searchInput = document.getElementById("search-input");
+searchInput.addEventListener("input", function() {
+var searchTerm = searchInput.value.toLowerCase();
+// loop through the rows and hide/show them based on the search term
+for (var i = 0; i < tableBody.rows.length; i++) {
+var row = tableBody.rows[i];
+var nameCell = row.cells[1];
+if (nameCell.textContent.toLowerCase().indexOf(searchTerm) !== -1) {
+row.style.display = "";
+} else {
+row.style.display = "none";
+}
+}
+});
+});
+  
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+
+
+    </script>
+  </body>
+</html>

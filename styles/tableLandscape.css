@@ -1,0 +1,51 @@
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+}
+th {
+    background-color: #ddd;
+    font-weight: bold;
+}
+img {
+    display: block;
+    margin: auto;
+}
+
+
+/* Style the header */
+.search {
+padding: 10px 16px;
+height: fit-content;
+width: fit-content;
+padding-left: 100px;
+}
+
+/* Page content */
+.content {
+padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+position: fixed;
+top: 0;
+width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+padding-top: 102px;
+}
+
+.noScroll{
+    overflow: hidden;
+    }
+
+    body{
+        
+    }

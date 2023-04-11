@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   baseProfile="full"
+   preserveAspectRatio="xMidYMid meet"
+   zoomAndPan="magnify"
+   id="Government_Ensign_of_the_United_Kingdom"
+   viewBox="-15 -7.5 30 15"
+   width="1200"
+   height="600"
+   sodipodi:version="0.32"
+   inkscape:version="0.44.1"
+   sodipodi:docname="Government Service Ensign.svg"
+   sodipodi:docbase="/home/rabbit/data/images/Flags">
+  <metadata
+     id="metadata2264">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="793"
+     inkscape:window-width="1155"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.89083333"
+     inkscape:cx="600"
+     inkscape:cy="300"
+     inkscape:window-x="23"
+     inkscape:window-y="146"
+     inkscape:current-layer="Government_Ensign_of_the_United_Kingdom" />
+  <defs
+     id="defs2246">
+    <clipPath
+       id="border">
+      <rect
+         x="-15"
+         y="-7.5"
+         width="30"
+         height="15"
+         id="rect2249" />
+    </clipPath>
+  </defs>
+  <rect
+     fill="#00247D"
+     x="-15"
+     y="-7.5"
+     width="30"
+     height="15"
+     id="rect2251" />
+<!--The above line is the ensign field color: #CF142B red and #00247D blue-->  <g
+     id="canton"
+     transform="matrix(0.5,0,0,0.5,-7.5,-3.75)">
+    <g
+       clip-path="url(#border)"
+       id="g2254">
+      <circle
+         r="20"
+         fill="#00247D"
+         id="circle2256" />
+      <path
+         d="M -20,-10 L 20,10 M -20,10 L 20,-10"
+         stroke-width="3"
+         stroke="white"
+         id="diags_white" />
+      <path
+         d="M -20,-10 L 20,10 M -20,10 L 20,-10"
+         stroke-width="2"
+         stroke="#CF142B"
+         id="diags_red" />
+      <path
+         stroke="none"
+         fill="white"
+         d="M 0,0 l 20,10 h -3 l -20,-10 M 0,0 l 20,-10 h 3 l -20,10 M 0,0 l -20,10 h -3 l 20,-10 M 0,0 l -20,-10 h 3 l 20,10"
+         id="eraser_white" />
+<!--I think the above two lines give the simplest way to make the diagonals-->      <path
+         d="M -20,0 H 20 M 0,-10 V 10"
+         stroke-width="5"
+         stroke="white"
+         id="cross_white" />
+      <path
+         d="M -20,0 H 20 M 0,-10 V 10"
+         stroke-width="3"
+         stroke="#CF142B"
+         id="cross_red" />
+    </g>
+  </g>
+  <g
+     id="g6280"
+     transform="matrix(5.000143e-2,0,0,5.000143e-2,-15.01458,-7.499964)">
+    <path
+       style="fill:#f7d917;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:0.64338303;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1"
+       d="M 375.32202,150.00451 C 375.32202,158.10688 381.89624,164.67831 390.00037,164.67831 C 398.10451,164.67831 404.67871,158.10688 404.67873,150.00451 C 404.67873,141.90217 398.10451,135.33073 390.00037,135.33073 C 381.89624,135.33073 375.32202,141.90217 375.32202,150.00451 z M 379.51584,150.00451 C 379.51584,144.21743 384.21133,139.52324 390.00037,139.52324 C 395.78941,139.52324 400.48491,144.21743 400.48491,150.00451 C 400.48491,155.79163 395.78941,160.48579 390.00037,160.48579 C 384.21133,160.48579 379.51584,155.79163 379.51584,150.00451 z "
+       id="path2295" />
+    <path
+       sodipodi:nodetypes="cccccccccccccccccccccczz"
+       style="fill:#f7d917;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:0.57692158;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+       d="M 388.89247,152.11331 C 390.09691,153.47177 395.13904,155.20555 395.13904,155.20555 L 504.83803,159.34477 C 506.96336,159.82587 509.25843,160.6514 510.03127,161.97441 C 511.57696,164.62041 510.19929,169.43064 509.27188,173.88075 C 508.34447,178.33085 501.54173,192.65313 497.83208,196.62215 L 494.42709,191.55769 C 494.42709,191.55769 491.9592,200.46432 484.84901,208.04154 C 484.84901,208.04154 505.09091,204.54527 509.41886,199.37352 C 508.95514,199.25325 501.8495,199.00828 501.84949,199.00828 C 501.84949,199.00828 513.59012,186.0254 515.44495,173.63727 C 517.14742,162.2668 524.8821,150.38599 524.70457,149.99499 C 524.8821,149.604 517.14875,137.73205 515.44495,126.35272 C 513.59012,113.96459 501.84949,100.98171 501.84949,100.98171 C 501.8495,100.98171 508.95514,100.73674 509.41886,100.61648 C 505.09091,95.444725 484.84901,91.948449 484.84901,91.948449 C 491.9592,99.525668 494.42709,108.4323 494.42709,108.4323 L 497.83208,103.36784 C 501.54173,107.33685 508.34447,121.65913 509.27188,126.10923 C 510.19929,130.55934 511.57696,135.36958 510.03127,138.01559 C 509.25843,139.3386 506.96336,140.16411 504.83803,140.64522 L 395.13904,144.78444 C 395.13904,144.78444 390.05392,146.54637 388.86798,147.92539 C 387.68202,149.3044 387.68802,150.75484 388.89247,152.11331 z "
+       id="path5114" />
+    <g
+       id="g2069"
+       transform="matrix(0,-0.719855,0.503044,0,393.5829,202.3431)"
+       style="fill:#f7d917;fill-opacity:1;stroke:black;stroke-width:0.9500277;stroke-miterlimit:4;stroke-opacity:1">
+      <path
+         style="fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter"
+         d="M 0.43647644,35.436629 L 149.56352,35.436629 L 149.56352,54.857134 L 75.000001,64.567386 L 0.43647644,54.857134 L 0.43647644,35.436629 z "
+         id="path1293" />
+      <path
+         style="fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter"
+         d="M 30.404265,35.552704 L 30.404265,58.58261 L 35.578723,59.115804 L 35.292841,35.635576 L 30.404265,35.552704 z "
+         id="path2055"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter"
+         d="M 15.682768,35.559846 L 15.682768,56.622473 L 20.505156,57.395958 L 20.238726,35.499008 L 15.682768,35.559846 z "
+         id="path2057"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter"
+         d="M 119.5938,35.550778 L 119.5938,58.580684 L 114.41934,59.113878 L 114.70522,35.63365 L 119.5938,35.550778 z "
+         id="path2065"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter"
+         d="M 134.31529,35.55792 L 134.31529,56.620547 L 129.49291,57.394032 L 129.75934,35.497082 L 134.31529,35.55792 z "
+         id="path2067"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+  </g>
+</svg>

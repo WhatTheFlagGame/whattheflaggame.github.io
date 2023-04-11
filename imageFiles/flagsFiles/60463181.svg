@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" xmlns:xlink="http://www.w3.org/1999/xlink">
+<clipPath id="rect">
+ <rect width="560" height="260"/>
+</clipPath>
+<rect fill="#fff" width="1200" height="600"/>
+<rect fill="#215b33" width="560" height="260"/>
+<path fill="#0051ba" d="M0,260 V0 H560"/>
+<path clip-path="url(#rect)" stroke="#fcd116" stroke-width="23.4" d="M0,260 560,0"/>
+<path stroke-width="80" stroke="#ce1126" d="M0,300 H1200 M600,0 V600"/>
+<g transform="scale(2.6) translate(35,30)">
+<g id="star" fill="white" transform="scale(10)">
+ <g id="cone">
+  <polygon id="triangle" points="0,0 0,1 .5,1" transform="translate(0,-1) rotate(18)"/>
+  <use xlink:href="#triangle" transform="scale(-1,1)"/>
+ </g>
+  <use xlink:href="#cone" transform="rotate(72)"/>
+  <use xlink:href="#cone" transform="rotate(-72)"/>
+  <use xlink:href="#cone" transform="rotate(144)"/>
+  <use xlink:href="#cone" transform="rotate(-144)"/>
+</g>
+<use xlink:href="#star" transform="rotate(-40.6) translate(26,0) rotate(40.6)"/>
+<use xlink:href="#star" transform="rotate(40.6) translate(26,0) rotate(-40.6)"/>
+<use xlink:href="#star" transform="rotate(-40.6) translate(-26,0) rotate(40.6)"/>
+<use xlink:href="#star" transform="rotate(40.6) translate(-26,0) rotate(-40.6)"/>
+ </g>
+</svg>

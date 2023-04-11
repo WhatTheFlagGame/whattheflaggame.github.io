@@ -1,0 +1,211 @@
+html{
+	background: linear-gradient(-45deg, #3b4bdb, #2e1dc9, #23a6d5, #152e9c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+	font-family:"Twemoji Country Flags", "Arial";
+
+	-webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+
+}
+
+
+.imgBig {
+    border: 1px solid black;
+    width: 0;
+    height: 0;
+  }
+
+.imgIcon {
+  height: 1em;
+}
+
+
+  body {
+    text-align: center;
+  }
+
+  .button {
+padding: 15px 25px;
+font-size: 100%;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #000000;
+background-color: white;
+border: none;
+border-radius: 15px;
+box-shadow: 0 10px #999;
+height: 10%;
+width: 50%;
+margin-top: 2.5%;
+margin-bottom: 2.5%
+}
+
+.button:hover {background-color: #5e5e5e}
+
+.button:active {
+background-color: #5e5e5e;
+box-shadow: 0 15px #666;
+transform: translateY(4px);
+}
+
+.message{
+  font-size: 30px;
+  margin-top: 5%;
+  height: fit-content;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+
+
+
+
+
+
+@keyframes confetti-slow {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
+  }
+}
+@keyframes confetti-medium {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
+  }
+}
+@keyframes confetti-fast {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
+  }
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: none;
+  margin: auto;
+}
+
+.confetti-container {
+
+  perspective: 700px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.confetti {
+  position: absolute;
+  top: -10px;
+  border-radius: 0%;
+}
+.confetti--animation-slow {
+  animation: confetti-slow 5.25s linear 1 forwards;
+}
+.confetti--animation-medium {
+  animation: confetti-medium 4.75s linear 1 forwards;
+}
+.confetti--animation-fast {
+  animation: confetti-fast 4.25s linear 1 forwards;
+}
+
+.GIFcontainer{
+  width: 80%;
+  height: fit-content;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  align-self: center;
+  margin: auto;
+  margin-bottom: 15%;
+
+}
+
+body{
+
+  margin:0;
+}
+
+
+
+
+
+
+
+
+.footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px 0;
+	font-size: 14px;
+	position: static;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+  }
+  
+  .footer a {
+	color: #fff;
+	text-decoration: underline;
+  }
+
+  .footer a:visited{
+	color: #fff;
+  }
+  
+  .kofi-button {
+	height: 36px;
+  }
+  
+  .KOFIicon{
+	height: 17px;
+  }
+
+  .kofiButton{
+	background-color: #29abe0; 
+	color: white;
+	height: 45px; 
+	width: 250px; 
+	font-size: 17px; 
+	border-radius: 17px;
+	border: none; /* set the border to a solid red line */
+	outline: none; /* remove the default outline */
+	box-shadow: none; /* remove any default box-shadow */
+  }
+
+  .kofiButton:hover{
+	background-color: white;
+	color: #29abe0;
+	border: 3px solid #29abe0;
+	outline: none; /* remove the default outline */
+	box-shadow: none; /* remove any default box-shadow */
+
+  }
+
+  .instagram-link {
+	font-size: 1rem;
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
+  }
+
+  .INSTAGRAMicon{
+	height: 0.8em;
+  } 

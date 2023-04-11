@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="logo/faviconColor.png">
+  <title>What the Flag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script>
+   
+
+
+    let style1 = "landscape"
+    let style2 = "portrait"
+  </script>
+    <script src="scripts/orientation.js"></script>
+
+    <script src="scripts/wholeScript.js" type="application/javascript"></script>
+</head>
+
+
+
+
+<body onload="startGame()">
+
+
+  <div class="attribution-overlay" id="attribution-overlay">
+    
+  </div>
+
+    <div class="attribution-popup" id="attribution-popup">
+      The attribution could not be displayed
+  </div>
+  <br>
+  <div class="buttonContainer">
+  <div class="flex">
+  <button id="infoButton" class="infoButton" onclick="openPopup()">Info</button>
+</div>
+  <div class="flexEnd">
+    <span onclick="openPopup2()" class="material-symbols-outlined">
+      exit_to_app
+      </span>
+</div>
+</div>
+
+
+  <div id="popup" style="display: none;">
+    <div id="overlay"></div>
+    <div id="popup-content">
+
+    </div>
+  </div>
+
+  <div id="popup2" style="display: none;">
+    <div id="overlay2"></div>
+    <div id="popup-content2">
+      <h2>You are about to leave the game</h2>
+      <p>All progress will be lost. Do you want to proceed?</p>
+      <button class = "cancel" onclick="closePopup2()">Cancel</button>
+      <button class="proceed" onclick="window.location.replace('index.html')">Proceed</button>
+    </div>
+  </div>
+  <br><br>
+  <img oncontextmenu="return false;" id="flag" src="">
+  <br>
+  <div id="score"><a>Score: 0</a></div><br>
+  <div id="progress"><a style="text-decoration: underline; color: white; font-size: 20px;"> </a></div><br>
+
+  <br>
+  <div class="container">
+    <div class="Option-1"><button class="button1" id="guess1"></button> </div>
+    <div class="Option-2"><button class="button1" id="guess2"></button></div>
+    <div class="Option-3"><button class="button1" id="guess3"></button> </div>
+    <div class="Option-4"><button class="button1" id="guess4"></button> </div>
+  </div>
+
+
+  <div id="attribution" class="attribution">
+    Click here to view the attribution for this flag
+  </div>
+
+
+  <br><br>
+
+
+
+</body>
+</html>

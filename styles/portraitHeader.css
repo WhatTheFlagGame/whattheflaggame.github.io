@@ -1,0 +1,621 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f7f7f7;
+	padding: 20px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	margin: 6px;
+	border-radius: 10px;
+  }
+  
+  svg {
+	width: 110%;
+	height: auto;
+  }
+  
+  .header__buttons {
+	display: flex;
+	gap: 10px;
+  }
+  
+  .button {
+	font-size: 6px;
+	display: inline-block;
+	padding: 10px 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: #000000;
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.2s ease;
+	height: 10%;
+	width: 10%;
+  }
+  
+  .button:hover {
+	background-color: #333333;
+  }
+  
+  html {
+	background: linear-gradient(-45deg, #3b4bdb, #2e1dc9, #23a6d5, #152e9c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	font-family:"Twemoji Country Flags", "Arial";
+
+	-webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+	
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+  
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+  }
+  
+  /* reset default margin and padding */
+  * {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+  }
+  
+  .parent {
+	  display: grid;
+	  grid-template-columns: 1fr;
+	  grid-template-rows: repeat(3, 1fr);
+	  grid-column-gap: 0px;
+	  grid-row-gap: 20px;
+	  width: 100%;
+	  height: 80%;
+	  align-items: center;
+	  justify-content: center;
+	  text-align: center;
+	  }
+	  
+	  .div1 { grid-area: 1 / 1 / 2 / 2; }
+	  .div2 { grid-area: 2 / 1 / 3 / 2; }
+	  .div3 { grid-area: 3 / 1 / 4 / 2; }
+  
+  /* container for text */
+  .container {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  height: 60%;
+  }
+  
+  .gameModeButton {
+	  background-color: white;
+	  border-color: black;
+	  border-radius: 25px;
+	  padding: 10px 20px;
+	  font-size: 30px;
+	  width: 300px;
+	  height: 90px;
+	  color: black;
+	  font-weight: bold;
+	  margin-left: auto;
+	  margin-right: auto;
+	  cursor: pointer;
+	}
+  
+  /* text style */
+  h1 {
+	  cursor: pointer;
+	  font-size: 2rem;
+  }
+  
+  /* overlay with menu */
+  .overlay {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-color: rgba(0, 0, 0, 0.5);
+	  z-index: 9999;
+	  opacity: 0;
+	  visibility: hidden;
+	  transition: all 0.3s ease;
+
+  }
+  
+  /* show overlay with animation */
+  .overlay.show {
+	  opacity: 2;
+	  visibility: visible;
+
+  }
+  
+  /* menu container */
+  .menu {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%) scale(0);
+	  background-color: #fff;
+	  border-radius: 5px;
+	  padding: 2rem;
+	  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+	  transition: all 0.3s ease;
+	  height: 65%;
+	  width: 85%;
+	  justify-content: left;
+    overflow: scroll;
+  }
+  
+  .listItem{
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	  margin-left: 10px;
+  }
+  /* show menu when overlay has class "show" */
+  .overlay.show .menu {
+	  transform: translate(-50%, -50%) scale(1);
+  }
+  
+  /* menu list style */
+  .menu ul {
+	  display: flex;
+	  flex-direction: column;
+  
+	  list-style: none;
+  }
+  
+  /* menu link style */
+  .menu ul li a {
+	  color: #333;
+	  font-size: 1.1rem;
+	  text-decoration: none;
+	  transition: all 0.3s ease;
+  }
+  
+  /* menu link hover style */
+  .menu ul li a:hover {
+	  color: #004AAD;
+  }
+  
+  /* close button style */
+  .menu .close-btn {
+	  position: absolute;
+	  top: 10px;
+	  right: 10px;
+	  font-size: 1.5rem;
+	  color: #333;
+	  cursor: pointer;
+	  transition: all 0.3s ease;
+  }
+  
+  /* close button hover style */
+  .menu .close-btn:hover {
+	  color: #f00;
+  }
+  
+  /* hide close button at the beginning */
+  .overlay .menu .close-btn {
+	  opacity: 0;
+	  visibility: hidden;
+  }
+  
+  /* show close button when menu is open */
+  .overlay.show .menu .close-btn {
+	  opacity: 1;
+	  visibility: visible;
+  }
+  
+  /* zoom out animation for closing the menu */
+  .overlay.show.reverse .menu {
+	  transform: translate(-50%, -50%) scale(0);
+  }
+  
+	
+
+
+
+
+
+
+
+
+
+  .footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px 0;
+	font-size: 14px;
+	position: static;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+  }
+  
+  .footer a {
+	color: #fff;
+	text-decoration: underline;
+  }
+
+  .footer a:visited{
+	color: #fff;
+  }
+  
+  .kofi-button {
+	height: 36px;
+  }
+  
+  .KOFIicon{
+	height: 17px;
+  }
+
+  .kofiButton{
+	background-color: #29abe0; 
+	color: white;
+	height: 45px; 
+	width: 250px; 
+	font-size: 17px; 
+	border-radius: 17px;
+	border: none; /* set the border to a solid red line */
+	outline: none; /* remove the default outline */
+	box-shadow: none; /* remove any default box-shadow */
+  }
+
+  .kofiButton:hover{
+	background-color: white;
+	color: #29abe0;
+	border: 3px solid #29abe0;
+	outline: none; /* remove the default outline */
+	box-shadow: none; /* remove any default box-shadow */
+
+  }
+
+  .instagram-link {
+	font-size: 1rem;
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
+  }
+
+  .INSTAGRAMicon{
+	height: 0.8em;
+  } 
+
+  .popupContainer{
+	height: 100%;
+	width: 100%;
+  }
+
+  body{
+	height: 100vh;
+	width: 100vw;
+	
+  }
+
+  .body-sidebar-open{
+	overflow: hidden;
+  }
+
+
+
+
+
+  
+
+
+
+.popup {
+    position:fixed;
+    top: 0;
+    left: -90%;
+    width: 90%;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 1;
+    transition: left 0.5s;
+    text-align: left;
+    overflow: scroll;
+
+
+    
+
+  }
+
+
+  .popup2 {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 90%;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 1;
+    transition: left 0.5s;
+    text-align: center;
+    overflow: auto;
+    
+
+  }
+
+  .popup3 {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 90%;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 1;
+    transition: left 0.5s;
+    text-align: center;
+    overflow: auto;
+    
+
+  }
+
+  .popup::-webkit-scrollbar {
+    display: none;
+}
+
+  .popup2::-webkit-scrollbar {
+    display: none;
+}
+
+
+.close-popup{
+height: 100%;
+}
+
+.close-popup2{
+    height: 100%;
+    }
+
+    .close-popup3{
+      height: 100%;
+      }
+
+.disclaimerClose{
+    width: 100%;
+    height: 5%;
+    text-align:right;
+    justify-content: right;
+    align-items: right;
+}
+
+.disclaimerClose3{
+  width: 100%;
+  height: 5%;
+  text-align:right;
+  justify-content: right;
+  align-items: right;
+}
+
+  .popup.open {
+    left: 0;
+    padding: 15px;
+    overflow: auto;
+  }
+
+  .popup2.open {
+    left: 0;
+    padding: 15px;
+    overflow: auto;
+  }
+
+  .popup3.open {
+    left: 0;
+    padding: 15px;
+    overflow: auto;
+  }
+
+
+  .disclaimerClose2{
+    width: 100%;
+    height: 5%;
+    text-align:right;
+    justify-content: right;
+    align-items: right;
+}
+
+
+.howToPlayUl{
+  list-style-type: disc; 
+  list-style-position: inside; 
+  justify-content: left; 
+  text-align: left;
+  padding-left: 15px;
+}
+
+.howToPlay a:link{
+  color:black;
+}
+
+
+.howToPlayLi{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+nav {
+    position: sticky;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    align-items: center;
+
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -80%;
+    width: 80%;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 1;
+    transition: left 0.5s;
+    overflow: auto !important;
+
+  }
+
+
+
+  .closeButtonContainer{
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .open-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .close-btn {
+    display: flex;
+    margin: none;
+    margin: 10px;
+    margin-right: 15px;
+
+  }
+  
+
+  .CloseCursor{
+	cursor: pointer;
+  }
+
+  .CloseCursor1{
+	cursor: pointer;
+  }
+
+  .CloseCursor1:hover{
+	cursor: pointer;
+	color: red;
+  }
+
+.flagOTD{
+	width: 100%;
+}
+
+  .liSidebar {
+    padding: 20px;
+    border-bottom: 1px solid #ccc; /* Add a border to the bottom of each list item */
+    font-size: 110%;
+	cursor: pointer;
+  }
+  
+  .liSidebar:last-child {
+    border-bottom: none; /* Remove the border from the last list item */
+    border: none;
+    pointer-events: none;
+  }
+
+  .liSidebarFlagOTD {
+    pointer-events: none;
+  }
+  .ulSidebar {
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 60px;
+    padding: 0;
+  }
+  
+  .liSidebar {
+    padding-bottom: 35px;
+    padding-top: 35px;
+  }
+  
+  .liSidebar:hover {
+    background-color: #ccc;
+  }
+  
+  .navbarText{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .body-disable-scroll{
+    overflow:hidden;
+  }
+
+  .banner{
+    display:block;
+    height: fit-content;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(240, 93, 93);
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 6px;
+    border-radius: 10px;
+
+  }
+
+  .paddingTD{
+    padding-top: 15px;
+  padding-bottom: 5px;
+  }
+
+  .padding2TD{
+    padding-top: 5px;
+    padding-bottom: 30px;
+  }
+
+  .element{
+    width: 30vw;
+  }
+
+  .example{
+    width: 30vw;
+  }
+
+  .nepal{
+    height: 10vh;
+  }
+
+  .fade-out {
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,381 @@
+
+
+.container {  display:grid;
+  grid-template-columns: 40vmin 40vmin;
+  grid-template-rows: 40vmin 40vmin;
+  gap: 1% 1%;
+  grid-auto-flow:dense;
+  grid-template-areas:
+    "Option-1 Option-2"
+    "Option-3 Option-4";
+    justify-content: center;
+
+
+}
+
+.Option-1 { grid-area: Option-1; }
+
+.Option-2 { grid-area: Option-2; }
+
+.Option-3 { grid-area: Option-3; }
+
+.Option-4 { grid-area: Option-4; }
+
+
+    .button1 {
+    border: none;
+    border-radius: 25px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 85%;
+    height: 85%;
+    background-color: white;
+    border-color: black;
+}
+
+.button1:hover{
+  background-color: rgb(212, 212, 212);
+}
+
+button:hover{
+  background-color: rgb(212, 212, 212);
+}
+
+body{
+    text-align: center;
+    font-family: Arial;
+    color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+
+  }
+
+  .finish{
+    height: 5%;
+    width: 20%;
+    margin: auto;
+    background-color: black;
+    color: white;
+    visibility: hidden;
+  }
+
+  html  { 
+    background: linear-gradient(-45deg, #3b4bdb, #2e1dc9, #23a6d5, #152e9c);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    font-family:"Twemoji Country Flags", "Arial";
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+img {
+  height: 40vmin;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+h1{
+  text-decoration: underline; 
+  color: white; 
+  font-size: 40px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48;
+  color: white;
+}
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    width: 85vw;
+    height: 75%;
+    overflow-y:auto;
+    overflow-x: hidden;
+  }
+  
+  #popup-content.show {
+    opacity: 1;
+    transition:all 0.3s ease-in-out;
+  }
+
+  .infoButton{
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    visibility: hidden;
+      
+  }
+
+  .info-show{
+    visibility: visible;
+  }
+
+  .buttonContainer{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #popup-content2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    width: 80%;
+  }
+  
+  #popup-content2.show {
+    opacity: 1;
+    transition:all 0.3s ease-in-out;
+  }
+
+  .endButton{
+    width: fit-content;
+    height: fit-content;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: end;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+  }
+  .flexEnd{
+    align-items: flex-end;
+    width: 100vh;
+    display: flex;
+    text-align: end;
+    justify-content: end;
+  }
+
+  .flexEnd2{
+    align-items: flex-end;
+    width: 100%;
+    display: flex;
+    text-align: end;
+    justify-content: end;
+  }
+
+  .flex{
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .container2{
+    padding-right: 40px;
+  }
+  
+
+  .cancel{
+    background-color: rgb(199, 46, 46);
+    margin-right: 20px;
+    height: 50px;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+  }
+
+  .proceed{
+    background-color: rgb(74, 185, 74);
+    margin-left: 20px;
+    height: 50px;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    color: black;
+
+  }
+
+  h2{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+
+  body{
+    display:block;
+    text-align: center;
+
+}
+.grid-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 0px;
+justify-items: center;
+align-items: center;
+
+
+}
+
+.grid-item {
+width: 100%;
+height: 100%;
+object-fit: contain;
+max-width: 100%;
+max-height: 100%;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.map{
+width: 80%;
+height: auto;
+}
+
+.imgGrid{
+max-width: 100%;
+max-height: 100%;
+object-fit: contain;
+}
+
+.infoText{
+font-weight:normal;
+font-size: 2.1vh;
+}
+
+.infoTextDescription{
+font-weight: normal;
+font-size: 1.7vh;
+}
+
+.attribution{
+  margin-top: 5vh;
+  visibility: hidden;
+  color: white;
+  margin-left: 10vw;
+  margin-right: 10vw;
+
+  -webkit-user-select: text; /* Safari */
+  -moz-user-select: text; /* Firefox */
+  -ms-user-select: text; /* Internet Explorer/Edge */
+  user-select: text; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.attribution a{
+  color: white;
+}
+
+.attribution a:visited{
+  color: white;
+}
+
+
+#attribution {
+  cursor: pointer;
+}
+
+.attrShow{
+  visibility: visible;
+}
+
+.attrHide{
+  visibility: hidden;
+}
+
+.cursorDefault{
+  cursor: default;
+}
+
+.attribution-popup{
+  display: block;
+  visibility: hidden;
+  width: 90vw;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+
+
+.attribution-overlay{
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.4;
+  visibility: hidden;
+  z-index: 2;
+
+}
+
+
+
+.attribution-popup-show{
+  visibility: visible;
+}
+
+.attribution-overlay-show{
+  visibility: visible;
+}

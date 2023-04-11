@@ -1,0 +1,153 @@
+body {
+  color: white;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  height: 2em;
+  width: 2em;
+  vertical-align: middle;
+}
+
+.button1 {
+  height: 5em;
+  width: 75%;
+  border-radius: 10%;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  clip-path: inset(10% 10% 10% 10% round 10px);
+  transition: all 0.25s ease-in-out;
+}
+
+.button1:hover {
+  background-color: rgb(60, 60, 60);
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+}
+
+.h1 {
+  font-size: 2em;
+}
+
+body:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.checkbox {
+  display: none;
+  align-items: center;
+}
+
+.checkboxLabel {
+  font-size: 1em;
+  display: flex;
+  align-items: center; /* added to align text and checkbox horizontally */
+  margin: 0.5em 0;
+}
+
+.button2 {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  height: 6vmin;
+  width: 16vmin;
+  justify-content: center;
+  margin-top: 1.5vmin;
+  margin-bottom: 1.5vmin;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5vmin;
+  margin-bottom: 1.5vmin;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
+}
+
+.button2:hover {
+  background-color: rgb(60, 60, 60);
+  color: white;
+  cursor: pointer;
+}
+
+.checkbox:checked + .button2 {
+  background-color: rgb(60, 60, 60);
+  color: white;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  margin: auto;
+  width: 80%;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+}
+
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  justify-content: center;
+}
+
+.div3 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  justify-content: center;
+}
+
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  justify-content: center;
+}
+
+
+.divCB1{
+  width: fit-content;
+  height: fit-content;
+  justify-content: left;
+  margin: none
+}
+
+.divCB2{
+width: fit-content;
+height: fit-content;
+justify-content: left;
+margin: none
+}
+
+html  { 
+  background: linear-gradient(-45deg, #3b4bdb, #2e1dc9, #23a6d5, #152e9c);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  font-family:"Twemoji Country Flags", "Arial";
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+

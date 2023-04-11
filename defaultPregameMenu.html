@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+
+    <script>
+
+    
+        var sourceFolder = "imageFiles/flagsFiles/"
+    
+        let style1 = "pregameMenuLandscape"
+      let style2 = "pregameMenuPortrait"
+      </script>
+
+    <script src="scripts/clearCache.js"></script>
+    <script src="scripts/orientation.js"></script>
+    <script src="scripts/getListLength.js"></script>
+  </head>
+
+    <style>
+  html {
+	background: linear-gradient(-45deg, #3b4bdb, #2e1dc9, #23a6d5, #152e9c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	font-family:"Twemoji Country Flags", "Arial";
+
+	-webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+	
+  }
+  
+    </style>
+<body onload="clearCache()">
+<div class="totalContainer">
+<p class="h1" id="h1"></p>
+
+<form>
+
+
+<a style="font-family: Arial, Helvetica, sans-serif; font-size: 25px; font-style: italic;">How many flags do you want to play with?</a>
+<br><br>
+<div class="parent">
+
+    <div class="div1">
+<label>
+    <input type="radio" class="checkbox" name="group" value="10"/>
+    <div id="button1" class="button2" style="font-family: Arial, Helvetica, sans-serif;">10</div>
+  </label>
+</div>
+  
+
+<div class="div2">
+  <label>
+    <input type="radio" class="checkbox" name="group" value="20"/>
+    <div id="button2" style="font-family: Arial, Helvetica, sans-serif;" class="button2">20</div>
+  </label>
+</div>
+  
+<div class="div3">
+  <label>
+    <input type="radio" class="checkbox" name="group" value="30"/>
+    <div id="button3" class="button2" style="font-family: Arial, Helvetica, sans-serif;">30</div>
+  </label>
+</div>
+
+<div class="div4">
+    <label>
+      <input type="radio" class="checkbox" name="group" value="1000"/>
+      <div id="button4" class="button2" style="font-family: Arial, Helvetica, sans-serif;"></div>
+    </label>
+  </div>
+  
+</div>
+  
+<br><br>
+  
+  <button id="submit" class="button1" onclick="redirect()">Start Game</button>
+</form>
+</div>
+
+<script>
+    var h1 = document.getElementById('h1')
+        var heading = sessionStorage.getItem('gameMode')
+        h1.innerHTML = heading
+
+
+    function redirect(){
+        
+    event.preventDefault();
+    const submitButton = document.getElementById("submit");
+    const link1 = "gameLayout.html";
+    let selectedButton = false;
+
+    const buttons = document.getElementsByName("group");
+    for (let button of buttons) {
+        if (button.checked) {
+            selectedButton = true;
+            break;
+        }
+    }
+
+    if (!selectedButton) {
+        alert("Please select the number of flags you want to play with.");
+        return;
+    }
+
+    window.open(link1, "_self");
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>

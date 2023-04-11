@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What the Flag</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    </head>
+    <style>
+        body{
+            display:block;
+            text-align: center;
+
+        }
+        .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  height: 30vh; /* sets the height of the grid to the full viewport height */
+  margin:20px;
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.map{
+    width: 80%;
+    align-self:center;
+}
+
+img{
+    width: 100%;
+}
+</style>
+
+    <body>
+        <h1>The American state flags</h1>
+        <h3>The United States has 50 first- level subdivisions, the states that make up the country. Each of them has its own flag.</h3>
+        <img class='map' src='info_media/us_map.svg'>
+        
+        <div class='grid-container'>
+            <div class='grid-item'><img class='imgGrid' src='info_media/utah.png'></div>
+            <div class='grid-item'><img class='imgGrid' src='info_media/montana.png'></div>
+            <div class='grid-item'><img class='imgGrid' src='info_media/oregon.png'></div>
+            <div class='grid-item'><img class='imgGrid' src='info_media/new_hampshire.png'></div>
+          </div>
+          <h3>The US states are infamous for their 'seal on a bedsheet' flags which are flags that only consist of a monochrome banner with the state seal in the center. You can see four examples above. This is not regarded as a good flag design practice since it's really uncreative and they are not easy to distinguish. However, there are also some really well- made flags like these ones: </h3>
+          <div class='grid-container'>
+            <div class='grid-item'><img class='imgGrid' src='info_media/california.png'></div>
+            <div class='grid-item'><img class='imgGrid' src='info_media/south_carolina.png'></div>
+            <div class='grid-item'><img class='imgGrid' src='info_media/new_mexico.png'></div>
+            <div class='grid-item'><img class='imgGrid' src='info_media/texas.png'></div>
+          </div>
+
+
+          <h1 style='color: black'>The Korean province flags</h1>
+          
+          <img class='map' src='info_media/kr_map.png'>
+          <h3>The republic of Korea (commonly referred to as South Korea) is divided into 16 first- level subdivions. They have ... interesting flags that might remind some more of logos than actual flags. That being said, if you know how to read Hangeul, the Korean alphabet, you're gonna have an easy time playing this quiz since most flags have the name of the province they belong to written on them. if you don't, well then probably not so much :D</h3>
+          <h3>Map by Sofiasean560 wiki - Own work, CC BY-SA 4.0, <a href='https://commons.wikimedia.org/w/index.php?curid=83797170'>https://commons.wikimedia.org/w/index.php?curid=83797170</a></h3>
+          
+          <h1 style='color: black'>The Canadian flags</h1>
+          
+          <img class='map' src='info_media/kr_map.png'>
+          <h3>Canada is divided into ten provinces and three territories. Their flags resemble the vivid history of the country and the different cultural influences the regions were subject to and even though they are right next to the US, their style is vastly different from the state flags of their neighbor. </h3>
+          
+
+
+
+          <div class='flexEnd2'> <span onclick='closePopup()' class='material-symbols-outlined' style='color: black;'> close </span> </div>
+
+          <h1 style='color: black'>The Canadian flags</h1>
+          
+          <img class='map' src='info_media/germany_map.png'>
+          <h3>Germany is comprised of 16 states, 3 of which (Berlin, Bremen and Hamburg) are city states. Until 1990, there were two German countries, East and West Germany. After the socialist regime in the East collapsed, Germany was reunified and the new states that had joined Western Germany received new flags, so some of these flags are actually quite young. The others however, can also not be considered particulary old since most of them got adopted after WWII. This quiz shows all flags in the 'state version', meaning with the coat of arms of their respective state on them but most flags also have a 'civil version without a coat of arms'. </h3>
+          <h3>Map by Escondites - Image:Karte Bundesrepublik Deutschland.svg, CC BY-SA 2.0 de, <a href='https://commons.wikimedia.org/w/index.php?curid=3300714'>https://commons.wikimedia.org/w/index.php?curid=3300714</a></h3>
+    
+
+
+          <div class='flexEnd2'> <span onclick='closePopup()' class='material-symbols-outlined' style='color: black;'> close </span> </div>
+
+          <h1 style='color: black'>The Australian flags</h1>
+          
+          <img class='map' src='info_media/australia_map.png'>
+          <h3>Australia consists of 6 states and 2 territories. It also owns several offshore territories like the Cocos Islands for example, but these are not included here since they are not proper incorporated subdivisions of Australia. The Most Australian state and territory flags are similar to the national flag, which features a UK flag in the canton and the <a href='https://en.wikipedia.org/wiki/Crux#Flags_and_symbols'>Southern Cross</a> in the field. </h3>
+          <img class='map' src='info_media/australia.jpg'>
+          <h2>Flag of Australia</h2>
+          <h3>Most Australian subdivision flags got adopted towards the end of the 19th century, but some are from the mid- 20th century.</h3>
+          <h3>By DavidEye - Own work, CC BY-SA 4.0, <a href='https://commons.wikimedia.org/w/index.php?curid=77368703'>https://commons.wikimedia.org/w/index.php?curid=77368703</a></h3>
+    
+
+
+
+          <div class='flexEnd2'> <span onclick='closePopup()' class='material-symbols-outlined' style='color: black;'> close </span> </div>
+
+          <h1 style='color: black'>The Japanese prefecture flags</h1>
+          
+          <img class='map' src='info_media/japan_map.png'>
+          <p class='infoText'>Japan is divided into 47 first- level administrative divsions called "都道府県" which is usually translated as "prefectures". Their flags have a relatively consistent design philosophy: A symbol, a <a href='https://en.wikipedia.org/wiki/Mon_(emblem)'>Mon</a> (a Japanese emblem) or a stylized character of the Japanese writing system (sometimes everything at once) on a monochrome banner. I can't give you examples here because that would reveal the answers to the flags (and therefore give you free points :D), but <a href='https://second.wiki/wiki/liste_japanischer_prc3a4fektursymbole'>here</a> is an overview of all flags and their hidden meanings.</p>
+          <img class='map' src='info_media/australia.jpg'>
+          
+
+          <div class='flexEnd2'> <span onclick='closePopup()' class='material-symbols-outlined' style='color: black;'> close </span> </div>
+
+          <h1 style='color: black'>The Soviet SSR flags</h1>
+          
+          <img class='map' src='info_media/japan_map.png'>
+          <p class='infoText'>The Soviet Union was a union of so- called 'Soviet Socialist Republics' which nominally were all equal but de facto ruled by the Russian SSR. Their flags are jokingly called 'copy & paste' flags because they are all a modified version of the national flag of the Soviet Union: </p>
+          <img src='info_media/ussr.webp'>
+          <p class='infoText'>After the collapse of the Soviet Union, all post- soviet countries changed their flag to a completely different design than what their SSR flag had been, except for one (and after plaing this quiz, you will probably know whihc one).
+        <p class='infoText'>Note: The Karelo-Finnish SSR, a lesser known SSR, only existed from 1940–1956 and its flag was in use from 1953–1956</p>
+          </p>
+          
+
+
+    
+        </body>

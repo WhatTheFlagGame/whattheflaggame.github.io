@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      let style1 = "pregameMenuLandscape"
+      let style2 = "pregameMenuPortrait"
+    </script>
+    <script src="scripts/orientation.js"></script>
+  </head>
+
+<body>
+
+  <h1>Flags of Oceania</h1>
+
+  <form class="form-control">
+      <div class="divCB1">
+    <input type="checkbox" id="option1" name="option1">
+    <label for="option1" style="font-family: Arial; font-size: 5vmin;">Include dependencies and territories</label><br><br>
+  </div>
+  
+  <a style="font-family: Arial, Helvetica, sans-serif; font-size: 25px; text-decoration: underline;">How many flags do you want to play with?</a>
+  <br><br>
+  <div class="parent">
+  
+    
+  
+  <div class="div2">
+    <label>
+      <input type="radio" class="checkbox" name="group" value="10"/>
+      <div style="font-family: Arial, Helvetica, sans-serif;" class="button2">10</div>
+    </label>
+  </div>
+    
+  <div class="div3">
+    <label>
+      <input type="radio" class="checkbox" name="group" value="1000"/>
+      <div id="all" class="button2" style="font-family: Arial, Helvetica, sans-serif;">All (15)</div>
+    </label>
+  </div>
+    
+  </div>
+    
+  <br><br>
+    
+    <button id="submit" class="button1" onclick="redirect()">Start Game</button>
+  </form>
+
+  
+<script>
+
+  function redirect(){
+      event.preventDefault();
+      const option1 = document.getElementById("option1");
+      const option2 = document.getElementById("option2");
+      const submitButton = document.getElementById("submit");
+      const link1 = "gameLayout.html";
+      let selectedButton = false;
+  
+      const buttons = document.getElementsByName("group");
+      for (let button of buttons) {
+          if (button.checked) {
+              selectedButton = true;
+              break;
+          }
+        }
+  
+      if (!selectedButton) {
+          alert("Please select the number of flags you want to play with.");
+          return;
+      }
+  
+      if (option1.checked == true) {
+        const myString = "oceaniaTerritories";
+  
+  // Storing the string in the cache
+  sessionStorage.setItem("myStringKey", myString);
+  
+  const gameModeHeadingCache = "North America";
+  
+  sessionStorage.setItem("heading", gameModeHeadingCache);
+          window.open(link1, "_blank");
+      }
+  
+  
+      else if (option1.checked == false){
+        const myString = "oceania";
+  
+  // Storing the string in the cache
+  sessionStorage.setItem("myStringKey", myString);
+  
+  const gameModeHeadingCache = "North America";
+  
+  sessionStorage.setItem("heading", gameModeHeadingCache);
+  window.open(link1, "_blank");
+      }
+  
+  }
+  </script>
+  
+  <script>
+  const buttons = document.querySelectorAll('.checkbox');
+  
+  for (let button of buttons) {
+    button.addEventListener('change', function() {
+      if (this.checked) {
+        sessionStorage.setItem('selectedButton', this.value);
+        console.log(`Selected value: ${sessionStorage.getItem('selectedButton')}`);
+      }
+    });
+  }
+  
+  const checkbox1 = document.getElementById("option1");
+  const checkbox2 = document.getElementById("option2");
+  const button = document.getElementById("all");
+  
+  checkbox1.addEventListener("click", function() {
+    updateButton();
+  });
+  
+  
+  function updateButton() {
+    if (checkbox1.checked == true) {
+      button.innerHTML = "All (29)";
+    }
+  
+      else if (checkbox1.checked == false){
+          button.innerHTML = "All (15)"
+      }
+  
+    
+  }
+    
+    
+    
+    </script>
+
+
+
+
+
+</body>
+</html>

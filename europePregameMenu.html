@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script>
+      let style1 = "pregameMenuLandscape"
+      let style2 = "pregameMenuPortrait"
+    </script>
+    <script src="scripts/clearCache.js"></script>
+    <script src="scripts/orientation.js"></script>
+  </head>
+
+<body onload="clearCache()">
+
+<h1>Flags of Europe</h1>
+
+<form>
+  <div class="pageContainer">
+  <div class="checkboxContainer">
+    <div class="divCB1">
+  <input type="checkbox" id="option1" name="option1">
+  <label for="option1" style="font-family: Arial; font-size: 5vmin;">Include dependencies and territories</label><br><br>
+</div>
+<div class="divCB2">
+  <input type="checkbox" id="option2" name="option2">
+  <label for="option2" style="font-family: Arial; font-size: 5vmin;">Include states with limited recognition</label><br><br><br>
+</div>
+</div>
+</div>
+
+<a style="font-family: Arial, Helvetica, sans-serif; font-size: 25px; font-style: italic;">How many flags do you want to play with?</a>
+<br><br>
+<div class="parent">
+
+    <div class="div1">
+<label>
+    <input type="radio" class="checkbox" name="group" value="10"/>
+    <div class="button2" style="font-family: Arial, Helvetica, sans-serif;">10</div>
+  </label>
+</div>
+  
+
+<div class="div2">
+  <label>
+    <input type="radio" class="checkbox" name="group" value="20"/>
+    <div style="font-family: Arial, Helvetica, sans-serif;" class="button2">20</div>
+  </label>
+</div>
+  
+<div class="div3">
+  <label>
+    <input type="radio" class="checkbox" name="group" value="30"/>
+    <div class="button2" style="font-family: Arial, Helvetica, sans-serif;">30</div>
+  </label>
+</div>
+
+<div class="div4">
+    <label>
+      <input type="radio" class="checkbox" name="group" value="1000"/>
+      <div id="all" class="button2" style="font-family: Arial, Helvetica, sans-serif;">All (51)</div>
+    </label>
+  </div>
+  
+</div>
+  
+<br><br>
+  
+  <button id="submit" class="button1" onclick="redirect()">Start Game</button>
+</form>
+
+
+<script>
+    function redirect(){
+    event.preventDefault();
+    const option1 = document.getElementById("option1");
+    const option2 = document.getElementById("option2");
+    const submitButton = document.getElementById("submit");
+    const link1 = "gameLayout.html";
+    let selectedButton = false;
+
+    const buttons = document.getElementsByName("group");
+    for (let button of buttons) {
+        if (button.checked) {
+            selectedButton = true;
+            break;
+        }
+    }
+
+    if (!selectedButton) {
+        alert("Please select the number of flags you want to play with.");
+        return;
+    }
+
+    if (option1.checked == true && option2.checked == false) {
+      // Assigning a string to a variable
+const myString = "europeTerritories";
+
+// Storing the string in the cache
+sessionStorage.setItem("myStringKey", myString);
+
+const gameModeHeadingCache = "Europe";
+
+sessionStorage.setItem("heading", gameModeHeadingCache);
+window.open(link1, "_blank");
+
+    }
+
+    else if (option2.checked == true && option1.checked == false) {
+       // Assigning a string to a variable
+const myString = "europeDisputed";
+
+// Storing the string in the cache
+sessionStorage.setItem("myStringKey", myString);
+
+const gameModeHeadingCache = "Europe";
+
+sessionStorage.setItem("heading", gameModeHeadingCache);
+window.open(link1, "_blank");
+    }
+
+    else if (option1.checked == true && option2.checked == true){
+        // Assigning a string to a variable
+const myString = "europeAll";
+
+sessionStorage.setItem("myStringKey", myString);
+
+
+const gameModeHeadingCache = "Europe";
+
+sessionStorage.setItem("heading", gameModeHeadingCache);
+window.open(link1, "_blank");
+
+    }
+
+    else {
+        // Assigning a string to a variable
+const myString = "europe";
+
+// Storing the string in the cache
+sessionStorage.setItem("myStringKey", myString);
+
+const gameModeHeadingCache = "Europe";
+
+sessionStorage.setItem("heading", gameModeHeadingCache);
+window.open(link1, "_blank");
+
+    }
+}
+</script>
+
+<script>
+const buttons = document.querySelectorAll('.checkbox');
+
+for (let button of buttons) {
+  button.addEventListener('change', function() {
+    if (this.checked) {
+      sessionStorage.setItem('selectedButton', this.value);
+      console.log(`Selected value: ${sessionStorage.getItem('selectedButton')}`);
+    }
+  });
+}
+
+const checkbox1 = document.getElementById("option1");
+const checkbox2 = document.getElementById("option2");
+const button = document.getElementById("all");
+
+checkbox1.addEventListener("click", function() {
+  updateButton();
+});
+
+checkbox2.addEventListener("click", function() {
+  updateButton();
+});
+
+function updateButton() {
+  if (checkbox1.checked == true && checkbox2.checked == false) {
+    button.innerHTML = "All (58)";
+  } 
+  else if (checkbox2.checked == true && checkbox1.checked == false) {
+    button.innerHTML = "All (58)";
+  } 
+  else if (checkbox2.checked == true && checkbox1.checked == true) {
+    button.innerHTML = "All (65)";
+  }
+
+  else if (checkbox2.checked == false && checkbox1.checked == false) {
+    button.innerHTML = "All (51)"
+  }
+
+  }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

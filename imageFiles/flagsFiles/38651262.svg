@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="500" height="300" xml:space="preserve">
+  <path d="M0 300h500V0H0v300z" style="fill:#3a81cc;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  <path d="M0 300h500V200H0v100z" style="fill:#30ae48;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  <path d="M0 300h500v-50H0v50z" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  <use transform="translate(385.29685)" width="500" height="300" xlink:href="#a"/>
+  <use transform="translate(128.43229)" width="500" height="300" xlink:href="#a"/>
+  <use transform="translate(299.67531)" width="500" height="300" xlink:href="#a"/>
+  <use transform="translate(214.05381)" width="500" height="300" xlink:href="#a"/>
+  <use transform="translate(42.81076)" width="500" height="300" xlink:href="#a"/>
+  <path d="m43.49563 188.12725-7.513285-5.34986-7.465088 5.41192 2.967868-8.52594-7.656024-5.15618 9.346653.08086 2.73244-8.59739 2.808445 8.57483 9.346653-.15796-7.611534 5.21823 3.043872 8.50149z" id="a" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  <use transform="translate(428.10761)" width="500" height="300" xlink:href="#a"/>
+  <use transform="translate(342.4861)" width="500" height="300" xlink:href="#a"/>
+  <use transform="translate(256.86456)" width="500" height="300" xlink:href="#a"/>
+  <use transform="translate(171.24305)" width="500" height="300" xlink:href="#a"/>
+  <use transform="translate(85.621519)" width="500" height="300" xlink:href="#a"/>
+</svg>
